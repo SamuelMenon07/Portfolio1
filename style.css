@@ -1,8 +1,8 @@
-body {
+ body {
   background-color: #000;
 }
 
-/* Header Adjustment logo */
+/* /* Header Adjustment logo  */
 header {
   top: 18px;
   left: 0;
@@ -13,9 +13,9 @@ header {
 }
 /* Portfolio logo */ 
 body, html {
-    /* margin: 0;
+    margin: 0;
     padding: 0;
-    box-sizing: border-box; */
+    box-sizing: border-box;
     font-family: 'Arial', sans-serif;
     background: #000000;
   }
@@ -307,5 +307,271 @@ ul {
   canvas {
     display: block;
   }
+
+  /* Responsive Design */
+@media (max-width: 1024px) {
+  .buttons-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .example-2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .body-section {
+    padding: 40px 10px;
+  }
+  .intro-title {
+    font-size: 2rem;
+  }
+  .intro-text {
+    font-size: 1rem;
+  }
+  .button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text h1 {
+    font-size: 16px;
+  }
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+  .example-2 .icon-content {
+    margin: 10px;
+  }
+}
+
+
+@media (max-width: 375px) { /* iPhone SE and similar small screens */
+  .buttons-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    width: 100%; /* Ensure it doesn't overflow */
+  }
   
+  .button {
+    width: 90%; /* Make buttons fit smaller screens */
+    max-width: 250px; /* Prevent buttons from stretching too much */
+    text-align: center;
+  }
+}
   
+
+
+
+/* update for better responsive in all device */
+
+body {
+  background-color: #000;
+}
+
+/* Header Adjustment logo */
+header {
+  top: 18px;
+  left: 0;
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Portfolio logo */ 
+body, html {
+  font-family: 'Arial', sans-serif;
+  background: #000000;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 1000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #0077ff;
+  border-radius: 50%;
+  animation: circleSpin 3s linear infinite;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 3px;
+  background: #0077ff;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transform-origin: center;
+  animation: lineSpin 3s linear infinite;
+}
+
+.logo-text h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0077ff;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 2px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: textFadeIn 1s ease-out forwards 0.5s;
+}
+
+/* Social media Tags */
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.example-2 .icon-content {
+  margin: 20px 10px;
+  position: relative;
+}
+
+/* Body Section */
+.body-section {
+  padding: 5vh 5vw;
+  max-width: 90vw;
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+  animation: fadeInBody 1.5s ease-out;
+}
+
+.introduction {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #0077ff;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: 2px solid #0077ff;
+  border-radius: 25px;
+  background: #fff;
+  color: #0077ff;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #0077ff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.resume-button {
+  background: #0077ff;
+  color: #fff;
+}
+
+.resume-button:hover {
+  background: #005bb5;
+  border-color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .body-section {
+    padding: 6vh 8vw;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .example-2 {
+    justify-content: center;
+  }
+  .body-section {
+    padding: 5vh 6vw;
+  }
+  .intro-title {
+    font-size: 2rem;
+  }
+  .intro-text {
+    font-size: 1rem;
+  }
+  .buttons-container {
+    flex-direction: column;
+  }
+  .button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 375px) {
+  .button {
+    width: 100%;
+  }
+}
